@@ -16,6 +16,7 @@
 		88B9B33E2B0D635E008F2317 /* TodoMvvmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B9B33D2B0D635E008F2317 /* TodoMvvmUITestsLaunchTests.swift */; };
 		88B9B34B2B0D6450008F2317 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B9B34A2B0D6450008F2317 /* TodoModel.swift */; };
 		88B9B34D2B0D690D008F2317 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B9B34C2B0D690D008F2317 /* TodoViewModel.swift */; };
+		88B9B34F2B0D6C8F008F2317 /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B9B34E2B0D6C8F008F2317 /* TodoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		88B9B33D2B0D635E008F2317 /* TodoMvvmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoMvvmUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		88B9B34A2B0D6450008F2317 /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 		88B9B34C2B0D690D008F2317 /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
+		88B9B34E2B0D6C8F008F2317 /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				88B9B3202B0D635D008F2317 /* TodoMvvmApp.swift */,
 				88B9B3222B0D635D008F2317 /* ContentView.swift */,
+				88B9B34E2B0D6C8F008F2317 /* TodoView.swift */,
 				88B9B34A2B0D6450008F2317 /* TodoModel.swift */,
 				88B9B34C2B0D690D008F2317 /* TodoViewModel.swift */,
 				88B9B3242B0D635E008F2317 /* Assets.xcassets */,
@@ -265,6 +268,7 @@
 			files = (
 				88B9B34D2B0D690D008F2317 /* TodoViewModel.swift in Sources */,
 				88B9B34B2B0D6450008F2317 /* TodoModel.swift in Sources */,
+				88B9B34F2B0D6C8F008F2317 /* TodoView.swift in Sources */,
 				88B9B3232B0D635D008F2317 /* ContentView.swift in Sources */,
 				88B9B3212B0D635D008F2317 /* TodoMvvmApp.swift in Sources */,
 			);
