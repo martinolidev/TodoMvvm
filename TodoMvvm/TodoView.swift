@@ -14,5 +14,5 @@ struct TodoView: View {
 }
 
 #Preview {
-    TodoView()
+    ContentView()
 }
