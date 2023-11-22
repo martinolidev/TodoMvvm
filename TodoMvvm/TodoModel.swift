@@ -16,6 +16,11 @@ struct taskInformation {
 class TodoModel {
     var allMyTasks: [taskInformation] = []
     
+    func getDate() -> Date {
+        let Calendar = Calendar.current.dateComponents([.year, .month, .day], from: Date())
+        return Calendar.date!
+    }
+    
     func addTask(task: taskInformation) {
         allMyTasks.append(task)
     }

@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct TodoView: View {
+    @ObservedObject var viewModel = TodoViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text("To-do App")
+                .font(.title)
+                .bold()
+        }
     }
 }
 
