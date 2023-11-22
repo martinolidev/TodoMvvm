@@ -53,6 +53,8 @@ struct TodoView: View {
 }
 
 struct CardStructure: View {
+    @ObservedObject var viewModel2 = TodoViewModel()
+    
     var name: String
     var description: String
     
@@ -65,11 +67,13 @@ struct CardStructure: View {
                 HStack{
                     VStack(alignment: .leading) {
                         Text(name)
+                            .font(.title)
+                            .bold()
                         Text(description)
                     }
                     Spacer()
                     Button {
-                        //
+                        viewModel2.removeTask(task: taskInformation(name: name, description: description, completed: true))
                     } label: {
                         RoundedRectangle(cornerRadius: 16)
                             .frame(width: 50, height: 50)

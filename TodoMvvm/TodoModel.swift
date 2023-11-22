@@ -14,7 +14,7 @@ struct taskInformation {
 }
 
 class TodoModel {
-    var allMyTasks: [taskInformation] = [taskInformation(name: "text1", description: "text1", completed: false), taskInformation(name: "task2", description: "task2", completed: false)]
+    var allMyTasks: [taskInformation] = []
     
     func getDate() -> Date {
         let calendar = Calendar.current
