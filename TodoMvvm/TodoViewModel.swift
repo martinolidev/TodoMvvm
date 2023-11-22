@@ -9,11 +9,17 @@ import Foundation
 
 class TodoViewModel: ObservableObject {
     @Published var allMyTasks: [taskInformation] = []
+    @Published var date: Date
     
     private let model = TodoModel()
     
     init() {
         allMyTasks = model.allMyTasks
+        date = model.getDate()
+    }
+    
+    func convertDateToString() -> Date {
+        return date
     }
     
     func addTask(task: taskInformation) {
