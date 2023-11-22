@@ -17,8 +17,11 @@ class TodoModel {
     var allMyTasks: [taskInformation] = []
     
     func getDate() -> Date {
-        let Calendar = Date()
-        return Calendar
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year, .month, .day], from: Date())
+        let date = calendar.date(from: components)!
+        
+        return date
     }
     
     func addTask(task: taskInformation) {
