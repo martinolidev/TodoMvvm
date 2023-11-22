@@ -24,7 +24,7 @@ struct TodoView: View {
         }
         ScrollView {
             ForEach(viewModel.allMyTasks, id: \.name) { task in
-                CardStructure(name: task.name, description: task.description)
+                CardStructure(name: task.name, description: task.description, taskViewModel: viewModel)
             }
         }
         
@@ -49,14 +49,14 @@ struct TodoView: View {
                     )
             }
         }
+        .environmentObject(viewModel)
     }
 }
 
 struct CardStructure: View {
-    @ObservedObject var viewModel2 = TodoViewModel()
-    
     var name: String
     var description: String
+    var taskViewModel: TodoViewModel
     
     var body: some View {
         RoundedRectangle(cornerRadius: 16)
@@ -73,7 +73,7 @@ struct CardStructure: View {
                     }
                     Spacer()
                     Button {
-                        viewModel2.removeTask(task: taskInformation(name: name, description: description, completed: true))
+                        taskViewModel.removeTask(task: taskInformation(name: name, description: description, completed: false))
                     } label: {
                         RoundedRectangle(cornerRadius: 16)
                             .frame(width: 50, height: 50)
