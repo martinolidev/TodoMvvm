@@ -11,6 +11,7 @@ struct TodoView: View {
     @ObservedObject var viewModel = TodoViewModel()
     @State var taskName: String = ""
     @State var taskDescription: String = ""
+    @State var showAlert: Bool = false
     
     var body: some View {
         HStack {
@@ -37,7 +38,13 @@ struct TodoView: View {
             }
             
             Button {
-                viewModel.addTask(task: taskInformation(name: taskName, description: taskDescription, completed: false))
+                if taskName.isEmpty {
+                    showAlert.toggle()
+                } else {
+                    viewModel.addTask(task: taskInformation(name: taskName, description: taskDescription, completed: false))
+                    taskName = ""
+                    taskDescription = ""
+                }
             } label: {
                 RoundedRectangle(cornerRadius: 16)
                     .frame(width: 70, height: 80)
@@ -48,8 +55,10 @@ struct TodoView: View {
                             .bold()
                     )
             }
+            .alert(isPresented: $showAlert) {
+                        Alert(title: Text("Empty Field"), message: Text("Please add a task with a description"), dismissButton: .default(Text("OK")))
+                    }
         }
-        .environmentObject(viewModel)
     }
 }
 
