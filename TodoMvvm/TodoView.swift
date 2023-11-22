@@ -12,7 +12,7 @@ struct TodoView: View {
     
     var body: some View {
         HStack {
-            Text("To-do App")
+            Text(viewModel.convertDateToString())
                 .font(.title)
                 .bold()
         }

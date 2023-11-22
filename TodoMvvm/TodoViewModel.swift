@@ -18,8 +18,11 @@ class TodoViewModel: ObservableObject {
         date = model.getDate()
     }
     
-    func convertDateToString() -> Date {
-        return date
+    func convertDateToString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let myDateString = dateFormatter.string(from: date)
+        return myDateString
     }
     
     func addTask(task: taskInformation) {
