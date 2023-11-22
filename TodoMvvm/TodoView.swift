@@ -23,7 +23,9 @@ struct TodoView: View {
                 .bold()
         }
         ScrollView {
-            
+            ForEach(viewModel.allMyTasks, id: \.name) { task in
+                CardStructure(name: task.name, description: task.description)
+            }
         }
         
         HStack {
@@ -51,6 +53,9 @@ struct TodoView: View {
 }
 
 struct CardStructure: View {
+    var name: String
+    var description: String
+    
     var body: some View {
         RoundedRectangle(cornerRadius: 16)
             .stroke(Color.accentColor, lineWidth: 2)
@@ -59,8 +64,8 @@ struct CardStructure: View {
             .overlay(
                 HStack{
                     VStack(alignment: .leading) {
-                        Text("Just an example")
-                        Text("This will be the description")
+                        Text(name)
+                        Text(description)
                     }
                     Spacer()
                     Button {

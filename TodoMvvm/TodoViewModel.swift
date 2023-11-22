@@ -8,7 +8,7 @@
 import Foundation
 
 class TodoViewModel: ObservableObject {
-    @Published var allMyTasks: [taskInformation] = []
+    @Published var allMyTasks: [taskInformation]
     @Published var date: Date
     
     private let model = TodoModel()
