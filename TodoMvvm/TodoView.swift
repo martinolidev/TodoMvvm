@@ -50,6 +50,37 @@ struct TodoView: View {
     }
 }
 
+struct CardStructure: View {
+    var body: some View {
+        RoundedRectangle(cornerRadius: 16)
+            .stroke(Color.accentColor, lineWidth: 2)
+            .frame(height: 80)
+            .foregroundColor(.clear)
+            .overlay(
+                HStack{
+                    VStack(alignment: .leading) {
+                        Text("Just an example")
+                        Text("This will be the description")
+                    }
+                    Spacer()
+                    Button {
+                        //
+                    } label: {
+                        RoundedRectangle(cornerRadius: 16)
+                            .frame(width: 50, height: 50)
+                            .overlay(
+                                Image(systemName: "trash.slash.fill")
+                                    .foregroundColor(.white)
+                                    .bold()
+                                    .imageScale(.large)
+                            )
+                    }
+                }.padding()
+            )
+
+    }
+}
+
 #Preview {
     ContentView()
 }
