@@ -35,7 +35,7 @@ struct TodoView: View {
             }
             
             Button {
-                //
+                viewModel.addTask(task: taskInformation(name: taskName, description: taskDescription, completed: false))
             } label: {
                 RoundedRectangle(cornerRadius: 16)
                     .frame(width: 70, height: 80)
