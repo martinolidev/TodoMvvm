@@ -7,3 +7,5 @@ This is my project where I apply the MVVM concepts to a basic app, it looks bett
 ### Blog explaining evertthing
 
 https://medium.com/@noli.mtz/to-dos-and-to-don-ts-the-mvvm-guide-to-app-sanity-3984f34999dc
+
+https://github.com/martinolidev/TodoMvvm/assets/149841273/fec01237-ace9-4d2b-a2f0-b0e7b4f05663
